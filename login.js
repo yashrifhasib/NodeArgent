@@ -5,10 +5,8 @@ exports.checkForLogin = function(loginInfo)
 	var loginData = fs.readFileSync("loginFile.txt").toString().split(";");
 	for (var i = 0; i < loginData.length; i++)
 	{
-		var dataObj = loginData[i];
-		console.log(dataObj);
-		if (dataObj.uname == loginInfo.uname && dataObj.pword == loginInfo.pword)
-			return dataObj;
+		if ((JSON.parse(loginData[i]).uname == loginInfo.uname) && (JSON.parse(loginData[i]).pword == loginInfo.pword))
+			return loginData[i];			
 	}
 }
 

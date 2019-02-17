@@ -32,12 +32,9 @@ http.createServer(function(request, response)
 						
 						if (qobj.source == "login") {
 							var responseData = login.checkForLogin(qobj);
-							console.log(qobj);
-							console.log(responseData);
 							var transactions = fs.readFileSync("userTransactions/" + qobj.uname + ".txt").toString().split(";");
 							response.write("\n<script>transactions = [" + transactions + "];</script>\n");
-							response.write("\n<script>data = " + JSON.stringify(qobj) + ";</script>\n");
-							console.log(responseData);
+							response.write("\n<script>data = " + responseData + ";</script>\n");
 						}
 						
 						if (qobj.source == "register") {
