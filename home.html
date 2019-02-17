@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Home</title>
+		<script type="text/javascript">
+			function initialize() {
+				welcome = document.getElementById("welcome");
+				display();
+			}
+
+			function display() {
+				welcome.innerHTML = "Welcome user " + data.uname;
+			}
+		</script>
+		<style type="text/css">
+			body {
+
+			}
+		</style>
+	</head>
+	<body onload = "initialize();">
+		<h1 id = "welcome"></h1>
+	</body>
+</html>

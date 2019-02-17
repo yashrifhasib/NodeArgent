@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--Yashrif Hasib-->
+<html>
+	<head>
+		<title>Registration Page</title>
+		<script type = "text/javascript">
+			function initialize() {
+
+			}
+		</script>
+		<style type = "text/css">
+			form {
+				text-align: center;
+				vertical-align: middle;
+			}
+
+			img {
+				position: relative;
+				width: 30%;
+				margin-left: 35%;
+			}
+
+			.inputs, span, a {
+				font-size: 20pt;
+				font-family: sans-serif;
+			}
+
+			input:hover {
+				background-color: lightblue;
+				color: black;
+			}
+
+			a {
+				text-align: center;
+				font-size: 15pt;
+			}
+
+			.button {
+				font-size: 20pt;
+			}
+		</style>
+	</head>
+	<body onload = "initialize();">
+		<img src = "ic_launcher.png" /> <br/><br/><br/><br/><br/>
+		<form method = "post" action = "index.html">
+			<span>First Name: </span><input type = "text" name = "firstname" class = "inputs" /> <br/><br/><br/>
+			<span>Last Name: </span><input type = "text" name = "lastname" class = "inputs" /> <br/><br/><br/>
+			<span>Username: </span><input type = "text" name = "uname" class = "inputs" /> <br/><br/><br/>
+			<span>Initial Balance: </span><input type = "text" name = "initial" class = "inputs" /> <br/><br/><br/>
+			<span>Password: </span><input type = "password" name = "pword" class = "inputs" /> <br/><br/><br/>
+			<input type = "hidden" name = "source" value = "register" />
+			<input type = "submit" value = "Sign Up" class = "button" />
+		</form>
+		<br/>
+		<a href = "loginPage.html">Already Have an Account? Sign in!</a>
+	</body>
+</html>
